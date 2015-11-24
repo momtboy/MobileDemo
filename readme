@@ -1,0 +1,41 @@
+#############################
+移动端开发指南
+
+font-size: calc(100vw/320 * 20); 实用css3控制字体大小
+
+通过js动态设置html根元素字体大小
+
+用REM设置尺寸
+
+以640px为基准   当屏幕为640px   恰好与UI设计稿同步  此时根元素大小为40px
+
+计算尺寸   以设计稿上面的尺寸除以 40  得到  以rem为单位的尺寸  eg : 20/40 = 0.2rem
+
+
+################################
+
+移动端网页开发新技巧
+    rem排版320px至640px，其实就三条规则：
+    html{font-size:20px;font-size:calc( 1000vw/32 * 20);background-color:#E1E1E1;}
+    @media all and (max-width:320px){
+      html{font-size:20px;}
+    }
+    @media all and (min-width:640px){
+      html{font-size:40px;}
+    }
+    body{min-width:320px;max-width:640px;margin:0 auto;color:#333;padding:0;font:normal .12em/1.6 "Microsoft YaHei",Verdana,Tahoma;background-color:#FFF;}
+
+    /***---------------------------------  华丽的分割线 ------------------------------------***/
+    解释一下 font-size: calc();  css3中新增的功能  calc()能让你给元素的做计算，你可以给一个div元素，使用百分比、em、px和rem单位值计算出其宽度或者高度
+
+    (100vw/320 * 20)  css3中新增的单位:
+    vw——viewpoint width，视窗宽度，1vw等于视窗宽度的1%；
+    vh——viewpoint height，视窗高度，1vh等于视窗高度的1%；
+    vmin——vw和vh中较小的那个。
+
+    html{font-size:100px;font-size:calc(1000vw/32);background-color:#E1E1E1;}
+    这样写的目的就是  不使用Js也可以做到动态改变根元素字体大小
+    在标准设计稿（基于iPhone5） 320*568 宽度320  那么字体  1rem  =  100px; 相反 设计稿尺寸(y)为   y/100 = x rem;
+    前面 font-size: 100px;是为了兼容不主流的浏览器设置的  calc( vw)在主流浏览器都可以兼容
+
+    计算规则同上

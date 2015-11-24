@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*-------------------------------
+    *Filename           common.css
+    *Description        Public CSS
+    *Version            1.0.0
+    *Author             Created by CHENCONG
+    *E-mail             370489175@qq.com
+ -------------------------------*/
+@import "reset.css";
+/*--------
+    布局（grid）（.g-）；模块（module）（.m-）；元件（unit）（.u-）；功能（function）（.f-）；皮肤（skin）（.s-）；状态（.z-）
+ ---------*/
+/** ==================== 系统共用样式表 ====================== **/
+/*-----  UI组件 start ----*/
+@import "ui/ui.css";
+/*----- UI组件 end   -----*/
+/*开启硬件加速*/
+.cssGPU{-webkit-transform: translate3d(0, 0, 0);-moz-transform: translate3d(0, 0, 0);-ms-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+/*5px圆角*/
+.border-rads5{border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
+/*伸缩盒模式*/
+.flex-box {
+    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex; /* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+}
+.flex1 { box-flex : 1;-moz-box-flex: 1;-webkit-box-flex: 1  }
+.flex2 {box-flex : 2;-moz-box-flex: 2;-webkit-box-flex: 2  }
+.flex3 {box-flex : 3;-moz-box-flex: 3;  -webkit-box-flex: 3  }
+/*--header--*/
+header{width: 100%;height: 2rem;background: #00a5e0;line-height: 2rem;text-align: center;}
+    header a{display: inline-block;line-height: 2rem;color: #fff;font-size: .6rem;margin: 0 .3rem;}
+/*--footer--*/
+footer{position: fixed;bottom: 0;left: 0;width: 100%;height: 2rem;background: #00a5e0;text-align: center;color: #fff;line-height: 1.8;z-index: 300;}
+    footer a{color: #fff;}
+/*--盒子--*/
+.ui-container{padding: 0 .5rem 2.5rem .5rem;}
+.ui-panel h2 , .ui-grid-trisect{padding-right: 0;padding-left: 0;}
